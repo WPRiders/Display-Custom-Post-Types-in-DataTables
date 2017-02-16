@@ -8,7 +8,7 @@
             type: 'POST',
             async: true,
             url: wpr_plugin_info.wpr_ajax_url,
-            data: {action: 'wpr_get_users_list'},
+            data: {action: 'wpr_get_posts_list'},
             success: function (response) {
                 oTable = $('#wprlistingTable').DataTable({
                     "aaData": response,

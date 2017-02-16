@@ -13,12 +13,12 @@ function wpr_enqueue_scripts() {
 	wp_enqueue_script( 'wpr-features-js' );
 }
 
-add_action( 'wp_ajax_wpr_get_users_list', 'wpr_get_users_list' );
-add_action( 'wp_ajax_nopriv_wpr_get_users_list', 'wpr_get_users_list' );
+add_action( 'wp_ajax_wpr_get_posts_list', 'wpr_get_posts_list' );
+add_action( 'wp_ajax_nopriv_wpr_get_posts_list', 'wpr_get_posts_list' );
 /**
  * CPT ajax call
  */
-function wpr_get_users_list() {
+function wpr_get_posts_list() {
 	$args = array(
 		'post_type' => array( 'custom_post_type' ),
 	);
